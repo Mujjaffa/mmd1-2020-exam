@@ -502,6 +502,22 @@ body {
   color: black;
 }
 
+.midtbillede {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.midtbillede img {
+  width: 100%;
+  height: 100vh;
+  padding-top: 10vh;
+}
+
 .dinrøv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -512,13 +528,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../img/recycle.jpg");
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   margin-top: 10vh;
 }
 
@@ -529,9 +538,25 @@ body {
   font: 500;
   -webkit-column-count: 2;
           column-count: 2;
-  color: white;
-  text-shadow: 2px 2px 1px black;
-  margin: 100px 140px 130px 130px;
+  color: black;
+  margin: 50px 140px 90px 130px;
+}
+
+.bundtekst {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 80px;
+  color: black;
+  justify-content: center;
+}
+
+.bundtekst h1 {
+  margin: 0;
+  padding: 2vh 0 5vh 0;
 }
 
 /* What to do */
@@ -860,6 +885,34 @@ body {
 }
 
 /* Pollution */
+#Frontpic {
+  position: relative;
+  margin: 0%;
+  padding: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.middletext {
+  font-weight: 300;
+  font-size: 60px;
+  color: black;
+  font: 300;
+  -webkit-column-count: 2;
+          column-count: 2;
+  color: black;
+  padding: 10vh 10vh 10vh 10vh;
+}
+
+.middletext p {
+  margin: 0;
+}
+
 .pollution {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -870,7 +923,7 @@ body {
   position: relative;
   -o-object-fit: fill;
      object-fit: fill;
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   margin: 0;
 }
@@ -889,7 +942,23 @@ body {
 }
 
 .haha h1 {
-  margin: -3vh 0 0 0;
+  margin: -100vh 0 0 0;
+}
+
+.bottomtext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 50px;
+  color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottomtext h1 {
+  margin: 0;
+  padding: 5vh 0 5vh 0;
 }
 
 /* Sea Life */

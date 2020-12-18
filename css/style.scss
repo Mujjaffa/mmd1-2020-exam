@@ -1,736 +1,803 @@
-    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap');
-    body {
-        transition: background-color .5s;
-        margin: 0px;
-        font-family: 'Teko', cursive;
-        min-height: 100vh;
-    }
-    /* Til alle sider */
-    
-    #main {
-        font-size: 35px;
-        cursor: pointer;
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap');
+body {
+    transition: background-color .5s;
+    margin: 0px;
+    font-family: 'Teko', cursive;
+    min-height: 100vh;
+}
+
+
+/* Til alle sider */
+
+#main {
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    position: absolute;
+    margin-left: 10px;
+    height: 5vh;
+    z-index: 10;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.473);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.Logo {
+    display: flex;
+    width: 70%;
+    height: auto;
+    margin-left: 30px;
+    padding-top: 120px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #70aec6;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: left;
+    a {
         color: white;
-        text-shadow: 2px 2px 4px black;
-        position: absolute;
-        margin-left: 10px;
-        height: 5vh;
-        z-index: 10;
+        font-size: 40px;
+        margin-left: 50px;
+        text-decoration: none;
     }
-    
+}
+
+.footer2 {
+    display: flex;
+    position: absolute;
+    margin-top: 0vh;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: left;
+    a {
+        color: white;
+        font-size: 40px;
+        margin-left: 50px;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
     .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.473);
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
+        padding-top: 20px;
     }
-    
-    .Logo {
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* Index */
+
+#myVideo {
+    position: absolute;
+    margin: 0%;
+    padding: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#bottomVideo {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.container-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .topbox-text {
+        &.item1 {
+            margin: 17% 0 0 0;
+        }
+        &.item2 {
+            margin: 25% 0 0 0;
+        }
+        text-transform: uppercase;
+        h1 {
+            margin: 40px 0 0 0;
+            font-size: 150px;
+            line-height: 37px;
+            color: white;
+            text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.555);
+        }
+        p {
+            font-weight: 300;
+            margin: 0;
+            font-size: 90px;
+            color: white;
+            text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.555);
+        }
+    }
+}
+
+.title {
+    h2 {
+        font-size: 130px;
+        padding-top: 250px;
+        margin: 20vh 0 10vh 0;
+    }
+}
+
+#gallery {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px;
+    margin-top: -70px;
+    justify-content: center;
+    >figure,
+    >div {
+        margin: 0;
+        width: 33.333%;
+        figure {
+            height: 47.5%;
+            margin-bottom: 4vh;
+        }
+    }
+    >div {
+        position: relative;
+        top: -2vh;
+    }
+    figure {
+        position: relative;
+        overflow: hidden;
+    }
+    img {
+        display: block;
+        width: auto;
+        height: 120%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.ourcause {
+    margin-top: 100px;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    object-fit: contain;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 50vh;
+    text-align: left;
+    line-height: 35px;
+    a {
+        font-size: 70px;
+        color: black;
+        text-decoration: none;
+        margin-left: 60px;
+    }
+    p {
+        font-size: 40px;
+        margin-left: 80px;
+        margin-right: 80px;
+        line-height: 65px;
+    }
+}
+
+.Twice {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100%;
+    margin-left: -50px;
+    .btn1 {
+        background: white;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        margin: 4px 53px;
+        opacity: 1;
+        transition: 0.3s;
+        height: 500px;
+        width: 300px;
+    }
+    .btn2 {
+        border: none;
+        color: white;
+        opacity: 1;
+        transition: 0.3s;
+        height: 500px;
+        width: 300px;
+    }
+    .btn1:hover {
+        opacity: 0.6
+    }
+    .btn2:hover {
+        opacity: 0.6
+    }
+}
+
+.CR {
+    margin-top: 100px;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    object-fit: contain;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 50vh;
+    text-align: left;
+    line-height: 35px;
+    a {
+        font-size: 70px;
+        color: black;
+        text-decoration: none;
+        margin-left: 60px;
+    }
+    p {
+        font-size: 40px;
+        margin-left: 80px;
+        margin-right: 80px;
+        line-height: 65px;
+    }
+}
+
+.blackbox {
+    position: relative;
+    margin-bottom: 40px;
+    background-color: #000000;
+    object-fit: cover;
+    color: white;
+    width: 100%;
+    height: 90vh;
+    font-size: 50px;
+    text-align: center;
+    h1 {
+        margin-top: 0;
+        margin-bottom: -20px;
+    }
+    img {
+        display: box;
+        align-items: center;
+        width: 50%;
+        height: auto;
+    }
+}
+
+#gallery2 {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px;
+    margin-top: -70px;
+    justify-content: center;
+    >figure,
+    >div {
+        margin: 0;
+        width: 33.333%;
+        figure {
+            height: 47.5%;
+            margin-bottom: 4vh;
+        }
+    }
+    >div {
+        position: relative;
+        top: -2vh;
+    }
+    figure {
+        position: relative;
+        overflow: hidden;
+    }
+    img {
+        display: block;
+        width: auto;
+        height: 120%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.WTD {
+    margin-top: 100px;
+    margin-bottom: -20vh;
+    position: sticky;
+    object-fit: contain;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 70vh;
+    text-align: left;
+    line-height: 35px;
+    a {
+        font-size: 70px;
+        color: black;
+        text-decoration: none;
+        margin-left: 60px;
+    }
+    p {
+        font-size: 50px;
+        margin-left: 80px;
+        margin-right: 80px;
+        line-height: 65px;
+        font-weight: 300;
+    }
+}
+
+.title2 {
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+
+/* Our Cause */
+
+.myass {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    img {
+        height: auto;
+        width: 75vh;
+        padding-top: 10vh;
+    }
+}
+
+#octitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 70px;
+    justify-content: center;
+    position: relative;
+    h1 {
+        text-align: center;
+        margin: 60px 0 0 0;
+        font-size: 150px;
+        line-height: 60px;
+        color: rgb(0, 0, 0);
+    }
+}
+
+.midtbillede {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100vh;
+        padding-top: 10vh;
+    }
+}
+
+.dinrøv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    p {
+        font-weight: 300;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        font: 500;
+        column-count: 2;
+        color: rgb(0, 0, 0);
+        margin: 50px 140px 90px 130px;
+    }
+}
+
+.bundtekst {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    color: black;
+    justify-content: center;
+    h1 {
+        margin: 0;
+        padding: 2vh 0 5vh 0;
+    }
+}
+
+
+/* What to do */
+
+.recycle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    object-fit: fill;
+    height: 70vh;
+    width: 100%;
+    margin: 0px;
+}
+
+.WTDtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 120px;
+    position: relative;
+    z-index: 10;
+    color: black;
+    h1 {
+        margin: -3vh 0 0 0;
+    }
+}
+
+.mellemrum {
+    display: flex;
+    object-fit: contain;
+    position: relative;
+    justify-content: center;
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.dinfar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 90px 105px 50px;
+    align-items: center;
+    ul.b {
+        list-style-type: square;
+        font-weight: 300;
+        font: 500;
+        font-size: 45px;
+        margin-left: 2vh;
+    }
+    img {
+        height: 40%;
+        width: 40%;
+    }
+    h1 {
+        margin: 5px;
+    }
+}
+
+.wtdtext {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    justify-content: center;
+    position: relative;
+    h1 {
+        margin: 0px;
+        font-size: 60px;
+    }
+    p {
+        font-weight: 300;
+        margin: 0 105px 105px;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        font: 500;
+        column-count: 2;
+        line-height: 10vh;
+    }
+}
+
+
+/* Coral Reefs */
+
+.textimage {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: -60px;
+}
+
+.Text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 1px black;
+    margin: 100px 140px 0px 130px;
+    h1 {
+        font-size: 140px;
+        margin-bottom: -8vh;
+    }
+    p {
+        font-weight: 300;
+        line-height: 8vh;
+        font-size: 50px;
+    }
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/Reefbackground.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Contact Us */
+
+.is {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/BRUH.png");
+    height: 170vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    .cu {
         display: flex;
+        justify-content: center;
+        h1 {
+            font-size: 160px;
+            color: black;
+            margin: 0;
+        }
+    }
+    .us {
+        display: flex;
+        object-fit: cover;
+        justify-content: center;
+        vertical-align: top;
+        margin: 20vh 0 0 0;
+        position: relative;
+        img {
+            width: auto;
+            height: 50vh;
+            margin: 0 1vh 0 1vh;
+        }
+    }
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 98%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 50px;
+        padding: 0px;
+        text-align: center;
+    }
+    .us:hover .overlay {
+        opacity: 1;
+    }
+}
+
+#Text {
+    margin: 0;
+    font: 300;
+    font-size: 60px;
+    position: relative;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.473);
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .flex-container>div {
+        width: 80vh;
+        margin: 10px;
+        line-height: 75px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .flex-container2>div {
+        width: 80vh;
+        margin: 10px;
+        line-height: 75px;
+    }
+    .flex-container3 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .flex-container3>div {
+        width: 80vh;
+        margin: 10px;
+        line-height: 75px;
+    }
+}
+
+.foottext {
+    font-size: 120px;
+    color: black;
+    justify-content: center;
+    p {
+        margin: 0;
+        padding: 5vh 0 5vh 0;
+    }
+}
+
+
+/* Pollution */
+
+#Frontpic {
+    position: relative;
+    margin: 0%;
+    padding: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.middletext {
+    font-weight: 300;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    font: 300;
+    column-count: 2;
+    color: black;
+    padding: 10vh 10vh 10vh 10vh;
+    p {
+        margin: 0;
+    }
+}
+
+.pollution {
+    display: flex;
+    align-items: center;
+    position: relative;
+    object-fit: fill;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.haha {
+    display: flex;
+    justify-content: center;
+    font-size: 120px;
+    position: relative;
+    z-index: 10;
+    color: black;
+    h1 {
+        margin: -100vh 0 0 0;
+    }
+}
+
+.bottomtext {
+    display: flex;
+    font-size: 50px;
+    color: black;
+    justify-content: center;
+    h1 {
+        margin: 0;
+        padding: 5vh 0 5vh 0;
+    }
+}
+
+
+/* Sea Life */
+
+.CRtitle {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 120px;
+    color: white;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.555);
+    h1 {
+        margin: 30vh 0 0 0;
+    }
+}
+
+#bootypic {
+    position: absolute;
+    margin: 0%;
+    padding: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.Sealife {
+    font-weight: 300;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    font: 300;
+    column-count: 2;
+    color: black;
+    margin: 300px 140px 50px 130px;
+}
+
+.hej {
+    position: relative;
+    margin-bottom: 40px;
+    background-color: rgba(199, 199, 199, 0.514);
+    object-fit: cover;
+    color: white;
+    width: 100%;
+    height: 70vh;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10vh;
+    img {
+        display: box;
+        align-items: center;
         width: 70%;
         height: auto;
-        margin-left: 30px;
-        padding-top: 120px;
+        margin-left: -30px;
+        margin-top: 5vh;
     }
-    
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #ffffff;
-        display: block;
-        transition: 0.3s;
-    }
-    
-    .sidenav a:hover {
-        color: #70aec6;
-    }
-    
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-    
-    .footer {
-        display: flex;
-        position: relative;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        color: white;
-        text-align: left;
-        a {
-            color: white;
-            font-size: 40px;
-            margin-left: 50px;
-            text-decoration: none;
-        }
-    }
-    
-    .footer2 {
-        display: flex;
-        position: absolute;
-        margin-top: 0vh;
-        left: 0;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        color: white;
-        text-align: left;
-        a {
-            color: white;
-            font-size: 40px;
-            margin-left: 50px;
-            text-decoration: none;
-        }
-    }
-    
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 20px;
-        }
-        .sidenav a {
-            font-size: 18px;
-        }
-    }
-    /* Index */
-    
-    #myVideo {
-        position: absolute;
-        margin: 0%;
-        padding: 0;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-    
-    #bottomVideo {
-        position: relative;
-        margin: 0;
-        padding: 0;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60vh;
-        object-fit: cover;
-    }
-    
-    .container-top {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        .topbox-text {
-            &.item1 {
-                margin: 17% 0 0 0;
-            }
-            &.item2 {
-                margin: 25% 0 0 0;
-            }
-            text-transform: uppercase;
-            h1 {
-                margin: 40px 0 0 0;
-                font-size: 150px;
-                line-height: 37px;
-                color: white;
-                text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.555);
-            }
-            p {
-                font-weight: 300;
-                margin: 0;
-                font-size: 90px;
-                color: white;
-                text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.555);
-            }
-        }
-    }
-    
-    .title {
-        h2 {
-            font-size: 130px;
-            padding-top: 250px;
-            margin: 20vh 0 10vh 0;
-        }
-    }
-    
-    #gallery {
-        height: 90vh;
-        width: 100%;
-        display: flex;
-        box-sizing: border-box;
-        padding: 50px;
-        margin-top: -70px;
-        justify-content: center;
-        >figure,
-        >div {
-            margin: 0;
-            width: 33.333%;
-            figure {
-                height: 47.5%;
-                margin-bottom: 4vh;
-            }
-        }
-        >div {
-            position: relative;
-            top: -2vh;
-        }
-        figure {
-            position: relative;
-            overflow: hidden;
-        }
-        img {
-            display: block;
-            width: auto;
-            height: 120%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    
-    .ourcause {
-        margin-top: 100px;
-        position: sticky;
-        background-color: rgb(255, 255, 255);
-        object-fit: contain;
-        color: rgb(0, 0, 0);
-        width: 100%;
-        height: 50vh;
-        text-align: left;
-        line-height: 35px;
-        a {
-            font-size: 70px;
-            color: black;
-            text-decoration: none;
-            margin-left: 60px;
-        }
-        p {
-            font-size: 40px;
-            margin-left: 80px;
-            margin-right: 80px;
-            line-height: 65px;
-        }
-    }
-    
-    .Twice {
-        display: flex;
-        flex-direction: row;
-        position: sticky;
-        justify-content: center;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-        width: 100%;
-        margin-left: -50px;
-        .btn1 {
-            background: white;
-            border: none;
-            color: white;
-            padding: 10px 32px;
-            margin: 4px 53px;
-            opacity: 1;
-            transition: 0.3s;
-            height: 500px;
-            width: 300px;
-        }
-        .btn2 {
-            border: none;
-            color: white;
-            opacity: 1;
-            transition: 0.3s;
-            height: 500px;
-            width: 300px;
-        }
-        .btn1:hover {
-            opacity: 0.6
-        }
-        .btn2:hover {
-            opacity: 0.6
-        }
-    }
-    
-    .CR {
-        margin-top: 100px;
-        position: sticky;
-        background-color: rgb(255, 255, 255);
-        object-fit: contain;
-        color: rgb(0, 0, 0);
-        width: 100%;
-        height: 50vh;
-        text-align: left;
-        line-height: 35px;
-        a {
-            font-size: 70px;
-            color: black;
-            text-decoration: none;
-            margin-left: 60px;
-        }
-        p {
-            font-size: 40px;
-            margin-left: 80px;
-            margin-right: 80px;
-            line-height: 65px;
-        }
-    }
-    
-    .blackbox {
-        position: relative;
-        margin-bottom: 40px;
-        background-color: #000000;
-        object-fit: cover;
-        color: white;
-        width: 100%;
-        height: 90vh;
-        font-size: 50px;
-        text-align: center;
-        h1 {
-            margin-top: 0;
-            margin-bottom: -20px;
-        }
-        img {
-            display: box;
-            align-items: center;
-            width: 50%;
-            height: auto;
-        }
-    }
-    
-    #gallery2 {
-        height: 90vh;
-        width: 100%;
-        display: flex;
-        box-sizing: border-box;
-        padding: 50px;
-        margin-top: -70px;
-        justify-content: center;
-        >figure,
-        >div {
-            margin: 0;
-            width: 33.333%;
-            figure {
-                height: 47.5%;
-                margin-bottom: 4vh;
-            }
-        }
-        >div {
-            position: relative;
-            top: -2vh;
-        }
-        figure {
-            position: relative;
-            overflow: hidden;
-        }
-        img {
-            display: block;
-            width: auto;
-            height: 120%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    
-    .WTD {
-        margin-top: 100px;
-        margin-bottom: -20vh;
-        position: sticky;
-        object-fit: contain;
-        color: rgb(0, 0, 0);
-        width: 100%;
-        height: 70vh;
-        text-align: left;
-        line-height: 35px;
-        a {
-            font-size: 70px;
-            color: black;
-            text-decoration: none;
-            margin-left: 60px;
-        }
-        p {
-            font-size: 50px;
-            margin-left: 80px;
-            margin-right: 80px;
-            line-height: 65px;
-            font-weight: 300;
-        }
-    }
-    
-    .title2 {
-        display: flex;
-        font-size: 60px;
-        justify-content: center;
-        margin-top: -30px;
-    }
-    /* Our Cause */
-    
-    .myass {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        img {
-            height: auto;
-            width: 75vh;
-            padding-top: 10vh;
-        }
-    }
-    
-    #octitle {
-        display: flex;
-        flex-direction: column;
-        font-size: 70px;
-        justify-content: center;
-        position: relative;
-        h1 {
-            text-align: center;
-            margin: 60px 0 0 0;
-            font-size: 150px;
-            line-height: 60px;
-            color: rgb(0, 0, 0);
-        }
-    }
-    
-    .dinrøv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("../img/recycle.jpg");
-        height: 100vh;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        margin-top: 10vh;
-        p {
-            font-weight: 300;
-            font-size: 50px;
-            color: rgb(0, 0, 0);
-            font: 500;
-            column-count: 2;
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 2px 1px black;
-            margin: 100px 140px 130px 130px;
-        }
-    }
-    /* What to do */
-    
-    .recycle {
-        display: flex;
-        align-items: center;
-        position: relative;
-        object-fit: fill;
-        height: 70vh;
-        width: 100%;
-        margin: 0px;
-    }
-    
-    .WTDtitle {
-        display: flex;
-        justify-content: center;
-        font-size: 120px;
-        position: relative;
-        z-index: 10;
-        color: black;
-        h1 {
-            margin: -3vh 0 0 0;
-        }
-    }
-    
-    .mellemrum {
-        display: flex;
-        object-fit: contain;
-        position: relative;
-        justify-content: center;
-        img {
-            height: auto;
-            width: 100%;
-        }
-    }
-    
-    .dinfar {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin: 90px 105px 50px;
-        align-items: center;
-        ul.b {
-            list-style-type: square;
-            font-weight: 300;
-            font: 500;
-            font-size: 45px;
-            margin-left: 2vh;
-        }
-        img {
-            height: 40%;
-            width: 40%;
-        }
-        h1 {
-            margin: 5px;
-        }
-    }
-    
-    .wtdtext {
-        display: flex;
-        flex-direction: column;
-        font-size: 50px;
-        justify-content: center;
-        position: relative;
-        h1 {
-            margin: 0px;
-            font-size: 60px;
-        }
-        p {
-            font-weight: 300;
-            margin: 0 105px 105px;
-            font-size: 50px;
-            color: rgb(0, 0, 0);
-            font: 500;
-            column-count: 2;
-            line-height: 10vh;
-        }
-    }
-    /* Coral Reefs */
-    
-    .textimage {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        margin-top: -60px;
-    }
-    
-    .Text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        color: rgb(255, 255, 255);
-        text-shadow: 2px 2px 1px black;
-        margin: 100px 140px 0px 130px;
-        h1 {
-            font-size: 140px;
-            margin-bottom: -8vh;
-        }
-        p {
-            font-weight: 300;
-            line-height: 8vh;
-            font-size: 50px;
-        }
-    }
-    
-    .bg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("../img/Reefbackground.jpg");
-        height: 100vh;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    /* Contact Us */
-    
-    .is {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-image: url("../img/BRUH.png");
-        height: 170vh;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        margin: 0;
-        .cu {
-            display: flex;
-            justify-content: center;
-            h1 {
-                font-size: 160px;
-                color: black;
-                margin: 0;
-            }
-        }
-        .us {
-            display: flex;
-            object-fit: cover;
-            justify-content: center;
-            vertical-align: top;
-            margin: 20vh 0 0 0;
-            position: relative;
-            img {
-                width: auto;
-                height: 50vh;
-                margin: 0 1vh 0 1vh;
-            }
-        }
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            width: 98%;
-            transition: .5s ease;
-            opacity: 0;
-            color: white;
-            font-size: 50px;
-            padding: 0px;
-            text-align: center;
-        }
-        .us:hover .overlay {
-            opacity: 1;
-        }
-    }
-    
-    #Text {
-        margin: 0;
-        font: 300;
-        font-size: 60px;
-        position: relative;
-        text-align: left;
-        background-color: rgba(255, 255, 255, 0.473);
-        .flex-container {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .flex-container>div {
-            width: 80vh;
-            margin: 10px;
-            line-height: 75px;
-        }
-        .flex-container2 {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .flex-container2>div {
-            width: 80vh;
-            margin: 10px;
-            line-height: 75px;
-        }
-        .flex-container3 {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .flex-container3>div {
-            width: 80vh;
-            margin: 10px;
-            line-height: 75px;
-        }
-    }
-    
-    .foottext {
-        font-size: 120px;
-        color: black;
-        justify-content: center;
-        p {
-            margin: 0;
-            padding: 5vh 0 5vh 0;
-        }
-    }
-    /* Pollution */
-    
-    .pollution {
-        display: flex;
-        align-items: center;
-        position: relative;
-        object-fit: fill;
-        height: 70vh;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .haha {
-        display: flex;
-        justify-content: center;
-        font-size: 120px;
-        position: relative;
-        z-index: 10;
-        color: black;
-        h1 {
-            margin: -3vh 0 0 0;
-        }
-    }
-    /* Sea Life */
-    
-    .CRtitle {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        font-size: 120px;
-        color: white;
-        text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.555);
-        h1 {
-            margin: 30vh 0 0 0;
-        }
-    }
-    
-    #bootypic {
-        position: absolute;
-        margin: 0%;
-        padding: 0;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-    
-    .Sealife {
-        font-weight: 300;
-        font-size: 60px;
-        color: rgb(0, 0, 0);
-        font: 300;
-        column-count: 2;
-        color: black;
-        margin: 300px 140px 50px 130px;
-    }
-    
-    .hej {
-        position: relative;
-        margin-bottom: 40px;
-        background-color: rgba(199, 199, 199, 0.514);
-        object-fit: cover;
-        color: white;
-        width: 100%;
-        height: 70vh;
-        font-size: 50px;
-        text-align: center;
-        margin-top: 10vh;
-        img {
-            display: box;
-            align-items: center;
-            width: 70%;
-            height: auto;
-            margin-left: -30px;
-            margin-top: 5vh;
-        }
-    }
-    
-    .lol {
-        display: flex;
-        font-size: 60px;
-        justify-content: center;
-        margin-top: -40px;
-    }
+}
+
+.lol {
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    margin-top: -40px;
+}
